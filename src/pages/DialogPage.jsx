@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import dialogImg from "../assets/empowerment.jpg";
 import { BiWorld } from "react-icons/bi";
 import { RiVideoFill } from "react-icons/ri";
-import { FaSquarePhone } from "react-icons/fa6";
+import { FaArrowRightLong, FaSquarePhone } from "react-icons/fa6";
 import logo from "../assets/logo.png";
 import candil from "../assets/candil.png";
 const DialogPage = () => {
@@ -11,9 +11,7 @@ const DialogPage = () => {
       <div className="m-2 md:m-4 border border-gray-300">
         <img src={dialogImg} alt="" className="w-full" />
         <div className="p-4 md:p-8 space-y-4">
-          <h2 className="text-xl font-bold font-poppins text-red-500 ">
-            Brand : Empowerment Group
-          </h2>
+          
           <p className="font-poppins text-lg font-semibold text-zinc-800">
             Subject: Exciting Opportunity: Administrative Sales Assistant Role
           </p>
@@ -146,23 +144,23 @@ const DialogPage = () => {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center p-4 md:p-8 space-y-4 border border-gray-200">
+        <hr className="text-gray-200 m-1" />
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center p-4 md:p-8 space-y-4">
           <div className="space-y-8">
-            <div className="flex items-center justify-center md:justify-start">
+            <div className="flex flex-col items-center justify-center gap-12">
               <img src={logo} alt="logo" className="w-40" />
-            </div>
 
-            <a
-              href="https://calendly.com/empowerment-group"
-              target="_blank"
-              className="underline text-red-600 font-semibold font-poppins"
-            >
-              Reserve 45–60 Minute Meeting Slot
-            </a>
-            <p className="text-sm font-poppins text-center sm:text-left text-zinc-900 pt-4">
-              Hi, I'm Sandhiya—your HR Assistant. Welcome! Just follow the steps
-              to book time on my calendar
-            </p>
+              <a
+                href="https://calendly.com/empowerment-group"
+                target="_blank"
+                className=" bg-red-700 flex items-center gap-2 hover:scale-95 transition-transform duration-500 text-white font-semibold font-poppins px-4 py-3 rounded-md shadow-md shadow-gray-300"
+              >
+                Reserve 45–60 Minute Meeting Slot{" "}
+                <span>
+                  <FaArrowRightLong className="animate-pulse"/>
+                </span>
+              </a>
+            </div>
           </div>
           <div>
             <img src={candil} alt="" />
